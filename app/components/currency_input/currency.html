@@ -1,0 +1,8 @@
+<div class="CurrecyInput">
+    £<input ref="input"
+            :value="value"
+            :size="size"
+            @input="update_value($event.target.value)"
+            @focus="select_all"
+            @blur="format_value"/>
+</div>

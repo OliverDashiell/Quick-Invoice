@@ -1,0 +1,9 @@
+<div class="NumberInput">
+    <input ref="input"
+           :value="value"
+           :size="size"
+           @input="update_value($event.target.value)"
+           @keyup.up="increment"
+           @keyup.down="decrement"
+           @focus="select_all"/>
+</div>

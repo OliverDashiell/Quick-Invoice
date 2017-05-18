@@ -1,0 +1,7 @@
+<div class="TextInput">
+    <input ref="input"
+           :value="value"
+           :size="size"
+           @input="update_value($event.target.value)"
+           @focus="select_all"/>
+</div>

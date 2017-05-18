@@ -1,0 +1,10 @@
+.TextInput {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.TextInput
+input {
+    min-width: 12px;
+    text-align: center;
+}

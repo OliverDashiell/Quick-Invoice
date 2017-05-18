@@ -1,0 +1,73 @@
+<div class="InvoicePanel">
+    <div class="header">
+        <div class="header-half recipient">
+            <div class="contact-card" v-if="recipient">
+                <div class="clear" @click="recipient = null"><div class="cross">+</div></div>
+                <div class="break title">{{recipient.name}}</div>
+                <div class="break">{{recipient.address}}</div>
+                <div class="break">{{recipient.phone}}</div>
+                <div class="break">{{recipient.email}}</div>
+            </div>
+            <div class="contact-placeholder" @dragenter.prevent @dragover.prevent @drop="add_recipient" v-else>
+                <div class="placeholder-text">Recipient</div>
+            </div>
+        </div>
+        <div class="header-half sender">
+            <div class="contact-card" v-if="sender">
+                <div class="clear" @click="sender = null"><div class="cross">+</div></div>
+                <div class="title">{{sender.name}}</div>
+                <div class="break">{{sender.address}}</div>
+                <div>{{sender.phone}}</div>
+                <div>{{sender.email}}</div>
+            </div>
+            <div class="contact-placeholder" @dragenter.prevent @dragover.prevent @drop="add_sender" v-else>
+                <div class="placeholder-text">Sender</div>
+            </div>
+        </div>
+    </div>
+    <div class="meta">
+        <div class="title main-title">INVOICE</div>
+        <div class="date">Date <textline v-model="date"></textline></div>
+        <div class="ref">Ref <textline v-model="ref"></textline></div>
+    </div>
+    <div class="items">
+        <table class="items-table">
+            <tr class="item-header">
+                <th class="title">Item</th>
+                <th class="title">Description</th>
+                <th class="cost-col title right">Unit Cost</th>
+                <th class="qty-col title centre">Qty<small>(hrs)</small></th>
+                <th class="total-col title right">Total</th>
+            </tr>
+            <tr class="item-list" v-for="(item, index) in items">
+                <td class="name"><textarea rows="1" placeholder="name" v-model="item.name"></textarea></td>
+                <td class="description"><textarea rows="1" placeholder="add details of item here" v-model="item.description"></textarea></td>
+                <td class="right"><currency v-model="item.unit_cost"></currency></td>
+                <td class="centre"><number v-model="item.quantity"></number></td>
+                <td class="right">{{item.unit_cost * item.quantity | currency}}</td>
+                <td class="over-right"><span class="add" @click="add_line(index+1)">+</span><span class="remove" @click="remove_line(index)">-</span></td>
+            </tr>
+            <tr class="subtotal">
+                <td colspan="3" class="title right">Subtotal</td>
+                <td colspan="2" class="right">{{subtotal | currency}}</td>
+            </tr>
+            <tr class="recieved">
+                <td colspan="3" class="title right">Recieved</td>
+                <td colspan="2" class="right"><currency v-model="paid"></currency></td>
+            </tr>
+            <tr class="grand-total">
+                <td colspan="3" class="title right">Total</td>
+                <td colspan="2" class="right">{{total | currency}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <div class="footer-title title">Payment Details</div>
+        <hr class="underline"/>
+        <div class="footer-content">
+            <div class="details break">
+                <textarea rows="1" v-model="payment_details" placeholder="add details for paying this invoice"></textarea>
+            </div>
+        </div>
+    </div>
+</div>

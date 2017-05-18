@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoicey</title>
+
+    <!-- Normalize -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Chivo:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Currency Validator -->
+    <script src="https://cdn.rawgit.com/chrisvfritz/5f0a639590d6e648933416f90ba7ae4e/raw/98739fb8ac6779cb2da11aaa9ab6032e52f3be00/currency-validator.js"></script>
+
+	<!-- Hide the main template until vuejs has loaded -->
+	<style type="text/css"> [v-cloak] { display:none; } </style>
+</head>
+<body>
+	<div id="Main" v-cloak>
+        <div id="Contacts">
+            <contact-panel></contact-panel>
+        </div>
+        <div id="Invoice">
+            <invoice-panel></invoice-panel>
+        </div>
+	</div>
+	<script type="text/javascript" src="jspm_packages/system.js"></script>
+	<script type="text/javascript" src="config.js"></script>
+	<script type="text/javascript">
+		System.import("app/main");
+	</script>
+</body>
+</html>

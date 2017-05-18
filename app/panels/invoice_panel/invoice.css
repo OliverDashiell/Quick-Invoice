@@ -1,0 +1,218 @@
+.InvoicePanel {
+    position: relative;
+
+    /* A4 Size */
+    width: 21cm;
+    height: 29.7cm;
+
+    margin: auto;
+    padding: 95px 95px;
+
+    background: #FFF;
+    box-shadow: 0 0 0 0.75pt #D1D1D1, 0 0 3pt 0.75pt #CCC;
+}
+
+.InvoicePanel
+.header {
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px
+}
+
+.InvoicePanel
+.header-half {
+    flex: 1;
+}
+
+.InvoicePanel
+.header-half.sender {
+    text-align: right;
+}
+
+.InvoicePanel
+.contact-card {
+    position: relative;
+}
+
+.InvoicePanel
+.contact-card
+.clear {
+    visibility: hidden;
+
+    position: absolute;
+    top: 0px; bottom: 0px;
+    left: 0px; right: 0px;
+
+    display: flex;
+    align-items: center;
+
+    background: rgba(255, 192, 203, 0.5);
+    cursor: pointer;
+}
+
+.InvoicePanel
+.contact-card
+.cross {
+    width: 100%;
+    text-align: center;
+
+    font-size: 3em;
+    color: #E46A6A;
+
+    transform: rotate(45deg);
+}
+
+.InvoicePanel
+.contact-card:hover
+.clear {
+    visibility: visible;
+}
+
+.InvoicePanel
+.contact-placeholder {
+    height: 200px;
+}
+
+.InvoicePanel
+.contact-placeholder
+.placeholder-text {
+    width: 85%;
+    display: inline-block;
+
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+
+    color: #D2D2D2;
+
+    border: 1px dashed #D2D2D2;
+}
+
+.InvoicePanel
+.meta {
+    text-align: right;
+    margin: 20px 0px;
+
+    box-sizing: border-box;
+    padding: 10px
+}
+
+.InvoicePanel
+.meta .title.main-title {
+    font-size: 30px;
+    line-height: 32px;
+}
+
+.InvoicePanel
+.footer {
+    margin-top: 20px;
+}
+
+.InvoicePanel
+.footer textarea {
+    width: 100%;
+}
+
+.InvoicePanel .footer
+.footer-title,
+.InvoicePanel .footer
+.footer-content {
+    padding: 0px 10px;
+}
+
+.InvoicePanel
+.footer
+.underline {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.InvoicePanel
+.footer
+.details {
+    margin-bottom: 20px;
+}
+
+
+/* ---- Item Table ---- */
+
+.items-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.items-table th,
+.items-table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.item-header th {
+    border-bottom: 1px solid #000;
+}
+
+.items-table td {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.items-table
+.over-right {
+    visibility: hidden;
+    position: absolute;
+    right: 40px;
+    cursor: pointer;
+}
+
+.items-table tr:hover .over-right,
+.items-table .over-right:hover {
+    visibility: visible;
+}
+
+.items-table
+.over-right span {
+    margin: 0px 5px;
+}
+
+.items-table
+.over-right span:hover {
+    font-weight: bold;
+}
+
+.cost-col {
+    min-width: 100px;
+}
+
+.qty-col {
+    min-width: 80px;
+}
+
+.total-col {
+    min-width: 60px;
+}
+
+/* ---- Inputs ---- */
+
+.InvoicePanel .date,
+.InvoicePanel .ref {
+    white-space: nowrap;
+}
+
+.InvoicePanel
+.name
+textarea {
+    width: 110px;
+}
+
+.InvoicePanel
+.description
+textarea {
+    width: 270px;
+}
+
+.InvoicePanel
+.name input {
+    width: 100%;
+}

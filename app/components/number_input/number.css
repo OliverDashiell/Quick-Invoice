@@ -1,0 +1,10 @@
+.NumberInput {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.NumberInput
+input {
+    min-width: 12px;
+    text-align: center;
+}

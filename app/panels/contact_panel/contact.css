@@ -1,0 +1,66 @@
+.ContactPanel {
+    width: 100%;
+
+    padding: 0px 25px;
+    box-sizing: border-box;
+}
+
+.ContactPanel .contact-card,
+.ContactPanel .add-contact {
+    width: 100%;
+
+    margin: auto;
+    margin-bottom: 25px;
+    padding: 25px 25px;
+    box-sizing: border-box;
+
+    background: #FFF;
+    box-shadow: 0 0 0 0.75pt #D1D1D1, 0 0 3pt 0.75pt #CCC;
+}
+
+.ContactPanel
+.contact-card[draggable=true] {
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.ContactPanel
+.contact-card
+textarea {
+    width: 100%;
+}
+
+.ContactPanel
+.add-contact {
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0px;
+}
+
+.ContactPanel
+.add-contact:hover {
+    background: #F5FFF5;
+    cursor: pointer;
+}
+
+.ContactPanel
+.add-contact
+.plus {
+    width: 100%;
+    text-align: center;
+
+    line-height: normal;
+
+    font-size: 80px;
+    color: #CCC;
+}
+
+.ContactPanel
+.add-contact:hover
+.plus {
+    color: #D2E8D2;
+}

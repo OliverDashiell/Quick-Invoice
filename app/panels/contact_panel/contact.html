@@ -1,0 +1,11 @@
+<div class="ContactPanel">
+    <div class="contact-card" v-for="contact in contacts" :draggable="draggable_contact(contact)" @dragstart="set_drag_data(contact, $event)">
+        <div class="title"><textarea rows="1" placeholder="Contact Name" v-model="contact.name"></textarea></div>
+        <div class="break"><textarea rows="4" :placeholder="address_placeholder" v-model="contact.address"></textarea></div>
+        <div><textarea rows="1" placeholder="T. 12345678910" v-model="contact.phone"></textarea></div>
+        <div><textarea rows="1" placeholder="E. customer@email.com" v-model="contact.email"></textarea></div>
+    </div>
+    <div class="add-contact" @click="add_contact">
+        <div class="plus">+</div>
+    </div>
+</div>

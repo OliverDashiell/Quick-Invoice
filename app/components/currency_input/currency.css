@@ -1,0 +1,11 @@
+.CurrecyInput {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.CurrecyInput
+input {
+    min-width: 43px;
+    text-align: right;
+    margin-left: -5px;
+}

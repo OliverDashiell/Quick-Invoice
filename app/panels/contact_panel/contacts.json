@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Oliver Dashiell Bunyan",
+        "address": "4 Picton Street\nBristol\nBS6 5QA\nUK",
+        "phone": "T. +44 7801 331 980",
+        "email": "E. dashb@me.com"
+    },
+    {
+        "name": "Cecence Ltd",
+        "address": "Unit 6\nBunas Business Park\nHollom Down Road\nLopcombe Corner\nSalisbury\nHampshire\nSP5 1BP\nUK",
+        "phone": "T. +44 1264 781 115",
+        "email": "E. info@cecence.com"
+    }
+]
